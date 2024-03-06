@@ -9,6 +9,7 @@ newMovie,setNewMovie,handleSave}) => {
  const handleChange =(e) => {
     setNewMovie({
         ...newMovie,
+        id:Math.random(),
         [e.target.name] : e.target.value,
     });
  };
@@ -47,7 +48,7 @@ newMovie,setNewMovie,handleSave}) => {
       <Form.Group className="mb-3" >
         <Form.Label>Rating</Form.Label>
         <Form.Control type="number" 
-        name="rating"
+        name="Rating"
         placeholder="Put your rating Here..." 
         onChange={handleChange}
         />

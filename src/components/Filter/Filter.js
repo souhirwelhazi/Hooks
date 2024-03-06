@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import MovieList from '../MovieList/MovieList';
 
 const Filter = ({ratingChange,searchInput,movieData}) => {
- 
   var filtreadmMovie = movieData.filter(
    
     (movie,index) =>

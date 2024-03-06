@@ -3,7 +3,8 @@ import { Button, Container, Form, InputGroup, Nav, Navbar } from 'react-bootstra
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ReactStars from "react-rating-stars-component";
 import AddMovie from '../AddMovie/AddMovie';
-
+import { Link } from 'react-router-dom';
+import "./styles.css";
 const NavBar = ({
   setRatingChange,
    setSearchInput,
@@ -31,10 +32,18 @@ const NavBar = ({
     <Container>
     <Navbar.Brand href="#home">Movie APP</Navbar.Brand>
         <Nav className="me-auto">
-          <Nav.Link href="#home">Home</Nav.Link>
-          <Nav.Link href="#features">Features</Nav.Link>
-          <Nav.Link href="#pricing">Pricing</Nav.Link>
-          <Button variant="light" onClick={handleShow} >Add New Movies</Button>{' '}
+          <Nav.Link>
+            <Link to="/"  style={{color:'white', textDecoration:'none'}}>Home</Link>
+            </Nav.Link>
+          <Nav.Link>
+            {" "}
+            <Link to="/movie-details" style={{color:'white', textDecoration:'none'}}>Movie Details</Link>
+            </Nav.Link>
+          
+          
+          <Button variant="light" 
+          onClick={handleShow} >
+            Add New Movies</Button>{" "}
 
         </Nav>
         </Container>
@@ -72,4 +81,4 @@ const NavBar = ({
   )
 }
 
-export default NavBar
+export default NavBar;
